@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTDClient", "OTDClient\OTDClient.csproj", "{EE9F4D08-8739-40E5-A671-85D240E6D5A2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OTDClientSetup", "OTDInstaller\OTDInstaller.vdproj", "{4ADCF58E-740C-41BD-925C-0B877F460A79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE9F4D08-8739-40E5-A671-85D240E6D5A2} = {EE9F4D08-8739-40E5-A671-85D240E6D5A2}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTDServer", "OTDServer\OTDServer.csproj", "{77D5A253-D5AB-42CB-AC90-CCE148A1FB0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C4DD0A8-0765-41F0-9C16-8EC1BA3E8A28}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		build|x64 = build|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE9F4D08-8739-40E5-A671-85D240E6D5A2}.build|x64.ActiveCfg = build|x64
+		{EE9F4D08-8739-40E5-A671-85D240E6D5A2}.build|x64.Build.0 = build|x64
+		{4ADCF58E-740C-41BD-925C-0B877F460A79}.build|x64.ActiveCfg = build
+		{4ADCF58E-740C-41BD-925C-0B877F460A79}.build|x64.Build.0 = build
+		{77D5A253-D5AB-42CB-AC90-CCE148A1FB0D}.build|x64.ActiveCfg = build|x64
+		{77D5A253-D5AB-42CB-AC90-CCE148A1FB0D}.build|x64.Build.0 = build|x64
+		{77D5A253-D5AB-42CB-AC90-CCE148A1FB0D}.build|x64.Deploy.0 = build|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
