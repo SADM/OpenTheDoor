@@ -1,6 +1,12 @@
-MIT License
+Except where otherwise noted, code is licensed under MIT License.
 
-Copyright (c) Ihor Ratnikov.
+Icon made by **Freepik** from [www.flaticon.com](www.flaticon.com) is licensed under [Creative Commons BY 3.0 License](http://creativecommons.org/licenses/by/3.0/).
+
+OTDClientSetup is based on WIX Toolset and licensed under [Microsoft Reciprocal License](OTDClientSetup/LICENSE.md)
+
+**MIT License**
+
+Copyright (c) 2017 Ihor Ratnikov.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

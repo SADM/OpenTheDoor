@@ -6,12 +6,12 @@ using static System.Environment;
 
 namespace OpenTheDoor
 {
-    internal class Program
+    static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             byte[] requestBody = Encoding.UTF8.GetBytes(UserName);
-            HttpWebRequest otdRequest = HttpWebRequest.CreateHttp(ConfigurationManager.AppSettings["otd:APIAddress"]);
+            HttpWebRequest otdRequest = WebRequest.CreateHttp(ConfigurationManager.AppSettings["otd:APIAddress"]);
             otdRequest.UserAgent = "OTDClient";
             otdRequest.Method = "POST";
             otdRequest.ContentLength = requestBody.Length;
