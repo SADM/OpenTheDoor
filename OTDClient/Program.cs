@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Text;
-using static System.Environment;
+using System;
 
 namespace OpenTheDoor
 {
@@ -10,7 +10,7 @@ namespace OpenTheDoor
     {
         private static void Main()
         {
-            byte[] requestBody = Encoding.UTF8.GetBytes(UserName);
+            byte[] requestBody = Encoding.UTF8.GetBytes(Environment.UserName);
             HttpWebRequest otdRequest = WebRequest.CreateHttp(ConfigurationManager.AppSettings["otd:APIAddress"]);
             otdRequest.UserAgent = "OTDClient";
             otdRequest.Method = "POST";
