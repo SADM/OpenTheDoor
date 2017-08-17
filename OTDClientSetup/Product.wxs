@@ -2,9 +2,9 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
   <?define ProductName="Open The Door" ?>
-  <?define Version="1.0.1" ?>
-  <?define ProductCode="E45BC28E-4CCD-4889-90D8-0342C4EEE90F" ?>
-  <?define UpgradeCode="5A463C74-0865-4B77-9876-A9247F8AC498" ?>
+  <?define Version="1.0.2" ?>
+  <?define ProductCode="df02136c-b401-488a-9419-00e4d11711b0" ?>
+  <?define UpgradeCode="0FD5B7AD-43B3-49F4-8790-791D1C8EEF0A" ?>
   <?define Manufacturer="SADM"?>
   <?define ConfigFile="[INSTALLFOLDER]OpenTheDoor.exe.config" ?>
 	<Product Id="$(var.ProductCode)" Name="$(var.ProductName)" Language="1049" Version="$(var.Version)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
@@ -16,11 +16,11 @@
 		<Feature Id="ProductFeature" Title="OTDClientSetup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
-    <Icon Id="OpenTheDoor.exe" SourceFile="whitekey.ico"/>
+    <Icon Id="OpenTheDoor.exe" SourceFile="Resources\whitekey.ico"/>
     <Property Id="ARPPRODUCTICON" Value="OpenTheDoor.exe" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
-    <Property Id="OTDAPIADDRESS" Value="http://otd:2701/otd/" />
-    <WixVariable Id="WixUILicenseRtf" Overridable="yes" Value="License.rtf" />
+    <Property Id="OTDAPIADDRESS" Value="http://otd/otd/" />
+    <WixVariable Id="WixUILicenseRtf" Overridable="yes" Value="Resources\License.rtf" />
     <UIRef Id="SetupDialogUI" />
 	</Product>
 

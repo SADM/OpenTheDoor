@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 
-namespace OTDServer
+namespace OTDAPI
 {
     public static class IP4
     {
-        public static string GetIP4Address(HttpListenerRequest request)
+        public static string GetIP4Address(IPAddress remoteIpAddress)
         {
             string IP4Address = String.Empty;
 
-            foreach(IPAddress IPA in Dns.GetHostAddresses(request.UserHostAddress))
+            foreach(IPAddress IPA in Dns.GetHostAddresses(remoteIpAddress.ToString()))
             {
                 if(IPA.AddressFamily.ToString() == "InterNetwork")
                 {
