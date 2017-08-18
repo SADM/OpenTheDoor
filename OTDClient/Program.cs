@@ -14,6 +14,7 @@ namespace OpenTheDoor
             HttpWebRequest otdRequest = WebRequest.CreateHttp(ConfigurationManager.AppSettings["otd:APIAddress"]);
             otdRequest.UserAgent = "OTDClient";
             otdRequest.Method = "POST";
+            otdRequest.ContentType = "application/json";
             otdRequest.ContentLength = requestBody.Length;
             Stream dataStream = otdRequest.GetRequestStream();
             dataStream.Write(requestBody, 0, requestBody.Length);

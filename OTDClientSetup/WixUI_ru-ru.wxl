@@ -603,5 +603,5 @@
     <String Id="msierrXmlFileFailedOpen" Overridable="yes">Не удалось открыть XML файл [3], причина: [2]</String>
     <String Id="msierrXmlFileFailedSelect" Overridable="yes">Не удалось найти элемент: [3] в XML файле: [4], причина: [2]</String>
     <String Id="msierrXmlFileFailedSave" Overridable="yes">Не удалось сохранить изменения в XML файле [3], причина: [2]</String>
-    <String Id="OTDAPIAddressLabel" Overridable="yes">Пожалуйста, введите адрес OTDServer. Он дожен оканчиваться косой чертой "/":</String>
+    <String Id="OTDAPIAddressLabel" Overridable="yes">Пожалуйста, введите адрес OTDServer:</String>
 </WixLocalization>

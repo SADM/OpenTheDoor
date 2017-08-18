@@ -6,7 +6,7 @@
   <?define ProductCode="df02136c-b401-488a-9419-00e4d11711b0" ?>
   <?define UpgradeCode="0FD5B7AD-43B3-49F4-8790-791D1C8EEF0A" ?>
   <?define Manufacturer="SADM"?>
-  <?define ConfigFile="[INSTALLFOLDER]OpenTheDoor.exe.config" ?>
+  <?define ConfigFile="[INSTALLFOLDER]OTDClient.exe.config" ?>
 	<Product Id="$(var.ProductCode)" Name="$(var.ProductName)" Language="1049" Version="$(var.Version)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
@@ -16,10 +16,10 @@
 		<Feature Id="ProductFeature" Title="OTDClientSetup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
-    <Icon Id="OpenTheDoor.exe" SourceFile="Resources\whitekey.ico"/>
-    <Property Id="ARPPRODUCTICON" Value="OpenTheDoor.exe" />
+    <Icon Id="OTDClient.exe" SourceFile="Resources\whitekey.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="OTDClient.exe" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
-    <Property Id="OTDAPIADDRESS" Value="http://otd/otd/" />
+    <Property Id="OTDAPIADDRESS" Value="http://otd/otd" />
     <WixVariable Id="WixUILicenseRtf" Overridable="yes" Value="Resources\License.rtf" />
     <UIRef Id="SetupDialogUI" />
 	</Product>
@@ -35,11 +35,11 @@
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
 		  <Component Id="OTDClient" Guid="4391D118-3C3A-41ED-81B2-E507C30986A2" Win64="yes">
-        <File Id="OTDClient" Source="..\OTDClient\build\OpenTheDoor.exe" KeyPath="yes" Checksum="yes" />
+        <File Id="OTDClient" Source="..\OTDClient\bin\x64\Release\OTDClient.exe" KeyPath="yes" Checksum="yes" />
         <RemoveFolder Id="INSTALLFOLDER" On="uninstall" />
 			</Component>
       <Component Id="ClientConfig" Guid="F5C864BB-7814-42A2-952D-C7934D01E41E" Win64="yes">
-        <File Id="ClientConfig" Source="..\OTDClient\build\OpenTheDoor.exe.config" KeyPath="yes" />
+        <File Id="ClientConfig" Source="..\OTDClient\bin\x64\Release\OTDClient.exe.config" KeyPath="yes" />
         <util:XmlFile Id="UpdateOTDAPIAddress"
                       File="$(var.ConfigFile)"
                       Action="setValue"
@@ -53,8 +53,8 @@
         <RegistryKey Root="HKCR" Key="otd">
           <RegistryValue Type="string" Value="URL:Open The Door" KeyPath="yes" />
           <RegistryValue Name ="URL Protocol" Type="string" Value="" />
-          <RegistryValue Key="DefaultIcon" Type="string" Value="[INSTALLFOLDER]OpenTheDoor.exe,0" />
-          <RegistryValue Key="shell\open\command" Type="string" Value="&quot;[INSTALLFOLDER]OpenTheDoor.exe&quot; &quot;%1&quot;" />
+          <RegistryValue Key="DefaultIcon" Type="string" Value="[INSTALLFOLDER]OTDClient.exe,0" />
+          <RegistryValue Key="shell\open\command" Type="string" Value="&quot;[INSTALLFOLDER]OTDClient.exe&quot; &quot;%1&quot;" />
         </RegistryKey>
         <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\ActionCenter\Quick Actions\All\QuickActions_Launcher_OpenTheDoor">
           <RegistryValue Name="FriendlyName" Type="string" Value="SADM.QuickAction.OpenTheDoor" />
