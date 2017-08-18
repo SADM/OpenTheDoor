@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System;
 using System.DirectoryServices;
-using Microsoft.AspNetCore.Http.Features;
-using System.Net.NetworkInformation;
 using System.Net;
+using System.Net.NetworkInformation;
 
 namespace OTDAPI.Controllers
 {
@@ -65,7 +62,6 @@ namespace OTDAPI.Controllers
 
         private static SearchResult RetrieveUserInfo(string logon)
         {
-
             DirectoryEntry currentDomain = new DirectoryEntry();
             string domainName = IPGlobalProperties.GetIPGlobalProperties().DomainName;
             DirectorySearcher search = new DirectorySearcher(currentDomain);

@@ -1,12 +1,12 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Text;
-using System;
 
 namespace OpenTheDoor
 {
-    static class Program
+    internal static class Program
     {
         private static void Main()
         {
